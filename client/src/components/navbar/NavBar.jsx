@@ -2,6 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
+import Logo from "../logo/Logo";
 
 
 const NavBar=()=> {
@@ -21,43 +22,43 @@ const NavBar=()=> {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className=" bg-green-800 p-4">
+    <Navbar onMenuOpenChange={setIsMenuOpen} className=" shadow-md p-4">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
         <NavbarBrand>
-          {/* <AcmeLogo /> */}
-          <p className="font-bold text-inherit">ACME</p>
+          
+          <Logo/>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
+          <Link color="foreground" href="#"className="hover:text-[#E51832]" >
+            Consult Now
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
+        <NavbarItem >
+          <Link  color= "foreground" href="#" className="hover:text-[#E51832]" >
+            Book Appointment
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
+          <Link color="foreground" href="#" className="hover:text-[#E51832]">
+            Health Package
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-        <Button as={Link}  href="#" variant="flat" className="hover:bg-green-900">
+        <Button as={Link}  href="#" variant="flat" className="bg-[#2090D5] text-white font-bold">
             Login
           </Button>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link}  href="#" variant="flat"className="hover:bg-green-900">
+          <Button as={Link}  href="#" variant="flat" className=" bg-[#2090D5] text-white font-bold">
             Sign Up
           </Button>
         </NavbarItem>
