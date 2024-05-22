@@ -53,12 +53,12 @@ const NavBar=()=> {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-        <Button as={Link}  href="#" variant="flat" className="bg-[#2090D5] text-white font-bold">
+        <Button as={Link}  href="login" variant="flat" className="bg-[#2090D5] text-white font-bold">
             Login
           </Button>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link}  href="#" variant="flat" className=" bg-[#2090D5] text-white font-bold">
+          <Button as={Link}  href="register" variant="flat" className=" bg-[#2090D5] text-white font-bold">
             Sign Up
           </Button>
         </NavbarItem>
