@@ -36,13 +36,17 @@ const Register = () => {
   });
   return (
       <form onSubmit={formik.handleSubmit}>
-      <div className='m-5 justify-start'> <Logo/></div>
-      <div  className='float-right md-40 p-5 '>
+      <div  className='float-right p-5 '>
       <Image src="/SignUp.png" width={400} height={400}  alt='SignUp-Logo' priority/>
     </div>
-    <div className='p-20 h-30 w-100 m-5'></div>
-    <div className m-20 p-5> < b><h1>Complete Your Profile</h1></b></div>
-    
+
+  
+    {/* form */}
+    <div className='m-5 justify-start'> <Logo/></div>
+    <h1 className='text-center text-2xl font-bold'>Complete Your Profile</h1>
+         <div className='flex justify-center items-center mt-4 '>
+        
+       <div className='flex flex-col justify-center  border-solid border-2  px-4 py-4 shadow-lg gap-1'>
         <label htmlFor="FullName">FullName* </label>
         <Input
           isClearable
@@ -112,8 +116,10 @@ const Register = () => {
         />
         {/* {formik.errors.Address} */}
         {formik.errors.ContactNumber ? <div className='text-red-700'>{formik.errors.ContactNumber}</div> : null}
-        <div className='p-2 m-2'>
-          <Button color="primary" type='submit'>Submit</Button> </div>
+        <div className='m-2 p-2 flex justify-center items-center'>
+          <Button color="secondary" type='submit' variant='ghost' size='lg'>Submit</Button> </div>
+          </div>
+          </div>
       </form>
   );
 };
